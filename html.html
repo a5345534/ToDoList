@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .box1 {
+      width: 250px;
+      height: 250px;
+      background-color: yellow;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="test">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div> -->
+
+  <!-- <div id='d2'>好吃喔
+    <div id="d1">吃麥
+      <p id="gg">踢歐歪z喊在</p>
+    </div>
+  </div>
+  <div id="c1">當勞好
+    <div id="c2">中午</div>
+  </div> -->
+
+  <!-- <div class="d1">我要變色</div>
+  <button id="btn">變顏色</button> -->
+  <div class="box1">
+    <div class="box2">
+      <button>按我</button>
+    </div>
+  </div>
+</body>
+<script src="/JavaScriptClass/Math.js"></script>
+<script>
+  // var loopInt = 0;
+  // var x = '';
+  // function changeColor() {
+  //   var text = document.querySelector('.d1');
+  //   switch (loopInt) {
+  //     case 0:
+  //       text.classList.remove('blue');
+  //       text.classList.add('red');
+  //       loopInt++;
+  //       break;
+  //     case 1:
+  //       text.classList.remove('red');
+  //       text.classList.add('green');
+  //       loopInt++;
+  //       break;
+
+  //     default:
+  //       text.classList.remove('green');
+  //       text.classList.add('blue');
+  //       loopInt = 0;
+  //       break;
+  //   }
+  // }
+  // function changeColor2() {
+
+  // }
+  // var btn = document.querySelector('button');
+  // btn.addEventListener("click", changeColor);
+  // document.querySelector('body').addEventListener("keypress", function (e) {
+  //   x = x + e.key;
+  //   console.clear();
+  //   console.log(x);
+  // })
+
+  document.querySelector('.box1').addEventListener("click", function (e) { console.log("box1", e.target) }, false)
+  //document.querySelector('.box2').addEventListener("click", function (e) { console.log("box2", e) }, true)
+  //document.querySelector('button').addEventListener("click", function (e) { console.log("btn", e) }, true)
+</script>
+
+</html>

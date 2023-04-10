@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .outerDiv {
+        text-align: -webkit-center;
+    }
+
+    .listDiv {
+        text-align: left;
+    }
+
+    .textDiv {
+        width: 300px;
+    }
+
+    .listUl label {
+        display: inline-block;
+        width: 200px;
+        word-wrap: break-word;
+        vertical-align: top;
+    }
+
+    .listUl li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: dotted;
+    }
+</style>
+
+<body>
+    <div class="outerDiv">
+        <h2>ToDoList</h2>
+        <div class="textDiv">
+            <div class="inputDiv">
+                <input type="text" name="" id="ipt">
+                <button id="recordBtn">紀錄</button>
+            </div>
+            <div class="listDiv">
+                <ul class="listUl">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var recordBtn = document.querySelector('#recordBtn');
+    recordBtn.addEventListener("click", addDo)
+    var listUl = document.querySelector('.listUl');
+    listUl.addEventListener('click', delDo);
+
+    function addDo() {
+        var iptText = document.querySelector('#ipt');
+        if (iptText.value === "" || iptText.value === null) {
+            alert("請輸入代辦事項");
+        } else {
+            var listUl = document.querySelector('.listUl');
+            var li = document.createElement('li');
+            var label = document.createElement('label');
+            var btn = document.createElement('button');
+            li.prepend(label);
+            label.innerText = iptText.value;
+            li.append(btn);
+            btn.innerText = "刪除";
+            listUl.append(li);
+            iptText.value = null;
+        }
+    }
+    function delDo(e) {
+        listUl.removeChild(e.target.parentElement);
+    }
+</script>
+
+</html>
